@@ -9,6 +9,8 @@ https://ai.azure.com/
 --Use tools like RAG, Grounding
 --Agentic
 --Model Management Protocol 
+--Context engineering 
+
 
 # AzureAIStudio
 # add more content
