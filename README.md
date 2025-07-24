@@ -10,6 +10,7 @@ https://ai.azure.com/
 --Agentic
 --Model Management Protocol 
 --Context engineering 
+--How to fetch data from internal resource, sharepoint, pdf, googledoc etc and contextualize the models
 
 
 # AzureAIStudio
