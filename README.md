@@ -15,3 +15,5 @@ https://ai.azure.com/
 
 # AzureAIStudio
 # add more content
+
+#AI-102 Microsoft labs
