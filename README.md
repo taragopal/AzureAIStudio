@@ -13,6 +13,8 @@ https://ai.azure.com/
 --How to fetch data from internal resource, sharepoint, pdf, googledoc etc and contextualize the models
 
 
+
+
 # AzureAIStudio
 # add more content
 
