@@ -1,0 +1,34 @@
+
+Develop generative AI apps in Azure
+======================================
+P1: 
+P2: 
+P3: 
+P4:
+P5:
+P6: 
+
+
+P7: Implement a responsible generative AI solution in Azure AI Foundry
+-- Plan responsible GenAI solution by implementing: 
+    -- Map: 
+          Identify potential harms: offensive, pejorative, or discriminatory? factually wrong? illegal ? 
+          Prioritize identified harms: likelyhood and the impact of the harm, then focus on the most harmful risks 
+          Test and verify the prioritized harms: Use Red Teaming strategy 
+          Document and share the verified harms
+
+    -- Measure
+    -- Mitigate:
+        1. Model: Includes various genAI models and self trained and finetuned models 
+        2. Safety System : content filters, platform level configs, four categories of potential harm (hate, sexual, violence, and self-harm).
+        3. System message and grounding: Specify systems inputs, use RAGs, add prompt engineering to add grounding data
+        4. User experience : 
+    -- Manage: Use azure foundry contentent safely functionalities: 
+Prompt shields >> 	Scans for the risk of user input attacks on language models
+Groundedness detection	>> Detects if text responses are grounded in a user's source content
+Protected material detection	>> Scans for known copyrighted content
+Custom categories >>	Define custom categories for any new or emerging patterns
+          
+  Uses the NIST AI Risk management framework 
+
+P8: 
