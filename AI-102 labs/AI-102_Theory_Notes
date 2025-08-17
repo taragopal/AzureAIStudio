@@ -34,4 +34,14 @@ Custom categories >>	Define custom categories for any new or emerging patterns
           
   Uses the NIST AI Risk management framework 
 
-P8: 
+P8: Evaluate generative AI performance in Azure AI Foundry portal
+------------------------------------------------------------------
+
+Model benchmarks : Accuracy, Coherence, Fluency, GPT similarity, AI assisted metrics (risk and safely, quality) 
+Natural Language Processing metrics: 
+                F1-score: Measures the ratio of the number of shared words between the generated and ground truth answers. 
+                BLEU: Bilingual Evaluation Understudy metric
+                METEOR: Metric for Evaluation of Translation with Explicit Ordering
+                ROUGE: Recall-Oriented Understudy for Gisting Evaluation
+
+
