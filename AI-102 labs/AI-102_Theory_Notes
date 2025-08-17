@@ -10,6 +10,9 @@ P6:
 
 
 P7: Implement a responsible generative AI solution in Azure AI Foundry
+---------------------------------------------------------------------
+https://microsoftlearning.github.io/mslearn-ai-studio/Instructions/06-Explore-content-filters.html
+
 -- Plan responsible GenAI solution by implementing: 
     -- Map: 
           Identify potential harms: offensive, pejorative, or discriminatory? factually wrong? illegal ? 
