@@ -36,6 +36,7 @@ Custom categories >>	Define custom categories for any new or emerging patterns
 
 P8: Evaluate generative AI performance in Azure AI Foundry portal
 ------------------------------------------------------------------
+Exercise - Evaluate generative AI model performance: https://microsoftlearning.github.io/mslearn-ai-studio/Instructions/07-Evaluate-prompt-flow.html
 
 Model benchmarks : Accuracy, Coherence, Fluency, GPT similarity, AI assisted metrics (risk and safely, quality) 
 Natural Language Processing metrics: 
