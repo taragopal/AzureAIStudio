@@ -20,7 +20,7 @@ Foundry Agent Service has 3 parts:
 -- Models ( use common OpenAI or Azure AI foundry models)  
 -- Knowlege ( enable the agent to ground prompts with contextual data)
 -- Tools (Enable code interpretations) 
-LAB: https://microsoftlearning.github.io/mslearn-ai-agents/Instructions/01-agent-fundamentals.html
+LAB.2.1: Explore AI Agent development: https://microsoftlearning.github.io/mslearn-ai-agents/Instructions/01-agent-fundamentals.html
 
 
 Part 2: Develop an AI agent with Azure AI Foundry Agent Service
@@ -42,7 +42,7 @@ Custom function: Call your custom function code – you must provide function de
 Azure Function: Call code in serverless Azure Functions.
 OpenAPI Spec: Call external APIs based on the OpenAPI 3.0 spec.
 
-Lab: https://microsoftlearning.github.io/mslearn-ai-agents/Instructions/02-build-ai-agent.html
+Lab.2.2: Develop an AI agent: https://microsoftlearning.github.io/mslearn-ai-agents/Instructions/02-build-ai-agent.html
 
 
 Part 3: Integrate custom tools into your agent
@@ -87,6 +87,131 @@ agent = agent_client.create_agent(
     instructions="You are a weather assistant tracking snowfall. Use the provided functions to answer questions.",
     toolset=toolset
 )
+
+AZURE FUNCTIONS:::::
+
+#Example: Using Azure Functions with a queue trigger
+
+storage_service_endpoint = "https://<your-storage>.queue.core.windows.net"
+
+azure_function_tool = AzureFunctionTool(
+    name="get_snowfall",
+    description="Get snowfall information using Azure Function",
+    parameters={
+            "type": "object",
+            "properties": {
+                "location": {"type": "string", "description": "The location to check snowfall."},
+            },
+            "required": ["location"],
+        },
+    input_queue=AzureFunctionStorageQueue(
+        queue_name="input",
+        storage_service_endpoint=storage_service_endpoint,
+    ),
+    output_queue=AzureFunctionStorageQueue(
+        queue_name="output",
+        storage_service_endpoint=storage_service_endpoint,
+    ),
+)
+
+agent = agent_client.create_agent(
+    model=os.environ["MODEL_DEPLOYMENT_NAME"],
+    name="azure-function-agent",
+    instructions="You are a snowfall tracking agent. Use the provided Azure Function to fetch snowfall based on location.",
+    tools=azure_function_tool.definitions,
+)
+
+
+OpenAPI Specification
+#Currently, three authentication types are supported with OpenAPI 3.0 tools: anonymous, API key, and managed identity.
+************************************************************************************************
+Example: Using an OpenAPI specification
+First, create a JSON file ( in this example, called snowfall_openapi.json) describing the API.
+************************************************************************************************
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Snowfall API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/snow": {
+      "get": {
+        "summary": "Get snowfall information",
+        "parameters": [
+          {
+            "name": "location",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "location": {"type": "string"},
+                    "snow": {"type": "string"}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+Simple format of an API: 1.  declaration of api and metadata.
+     2. paths: method = get(), parameters(name, in, required, schema type)
+     3. response : 200(), content -> schema -> properties
+
+#Then, register the OpenAPI tool in the agent defintion:
+--------------------------------------------------------------------
+
+from azure.ai.agents.models import OpenApiTool, OpenApiAnonymousAuthDetails
+
+with open("snowfall_openapi.json", "r") as f:
+    openapi_spec = json.load(f)
+
+auth = OpenApiAnonymousAuthDetails()
+openapi_tool = OpenApiTool(name="snowfall_api", spec=openapi_spec, auth=auth)
+
+agent = agent_client.create_agent(
+    model="gpt-4o-mini",
+    name="openapi-agent",
+    instructions="You are a snowfall tracking assistant. Use the API to fetch snowfall data.",
+    tools=[openapi_tool]
+)
+
+LAB.2.3: Build an agent with custom tools 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Part 4: Develop a multi-agent solution with Azure AI Foundry Agent Service
 
