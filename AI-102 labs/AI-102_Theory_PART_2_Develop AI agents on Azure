@@ -1,4 +1,5 @@
 Part 1: Get started with AI agent development on Azure
+------------------------------------------------------
 
 -- Ways developers can create AI agents: 
 1. Azure AI Foundry Agent Service is a managed service in Azure that is designed to provide a framework for creating, managing, and using AI agents within Azure
@@ -23,9 +24,30 @@ LAB: https://microsoftlearning.github.io/mslearn-ai-agents/Instructions/01-agent
 
 
 Part 2: Develop an AI agent with Azure AI Foundry Agent Service
+---------------------------------------------------------------
+
+Knowledge tools
+Knowledge tools enhance the context or knowledge of your agent. Available tools include:
+
+Bing Search: Uses Bing search results to ground prompts with real-time live data from the web.
+File search: Grounds prompts with data from files in a vector store.
+Azure AI Search: Grounds prompts with data from Azure AI Search query results.
+Microsoft Fabric: Uses the Fabric Data Agent to ground prompts with data from your Fabric data stores.
+
+Action tools
+Action tools perform an action or run a function. Available tools include:
+
+Code Interpreter: A sandbox for model-generated Python code that can access and process uploaded files.
+Custom function: Call your custom function code – you must provide function definitions and implementations.
+Azure Function: Call code in serverless Azure Functions.
+OpenAPI Spec: Call external APIs based on the OpenAPI 3.0 spec.
+
+Lab: https://microsoftlearning.github.io/mslearn-ai-agents/Instructions/02-build-ai-agent.html
 
 
 Part 3: Integrate custom tools into your agent
+-------------------------------------------------
+
 
 
 Part 4: Develop a multi-agent solution with Azure AI Foundry Agent Service
