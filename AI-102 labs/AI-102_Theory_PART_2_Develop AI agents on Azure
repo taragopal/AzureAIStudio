@@ -47,8 +47,46 @@ Lab: https://microsoftlearning.github.io/mslearn-ai-agents/Instructions/02-build
 
 Part 3: Integrate custom tools into your agent
 -------------------------------------------------
+Azure AI services provide several custom tool options
+Customer functions
+Azure Functions
+OpenAPI specification tools
+Azure Logic App 
 
 
+Example: 
+import json
+
+def recent_snowfall(location: str) -> str:
+    """
+    Fetches recent snowfall totals for a given location.
+    :param location: The city name.
+    :return: Snowfall details as a JSON string.
+    """
+    mock_snow_data = {"Seattle": "0 inches", "Denver": "2 inches"}
+    snow = mock_snow_data.get(location, "Data not available.")
+    return json.dumps({"location": location, "snowfall": snow})
+
+user_functions: Set[Callable[..., Any]] = {
+    recent_snowfall,
+}
+
+
+Register the function with your agent using the Azure AI SDK:
+
+# Initialize agent toolset with user functions
+functions = FunctionTool(user_functions)
+toolset = ToolSet()
+toolset.add(functions)
+agent_client.enable_auto_function_calls(toolset=toolset)
+
+# Create your agent with the toolset
+agent = agent_client.create_agent(
+    model="gpt-4o-mini",
+    name="snowfall-agent",
+    instructions="You are a weather assistant tracking snowfall. Use the provided functions to answer questions.",
+    toolset=toolset
+)
 
 Part 4: Develop a multi-agent solution with Azure AI Foundry Agent Service
 
