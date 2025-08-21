@@ -1,16 +1,25 @@
 Part 1: Get started with AI agent development on Azure
 
 -- Ways developers can create AI agents: 
-1. Azure AI Foundry Agent Service is a managed service in Azure that is designed to provide a framework for creating, managing, and using AI agents within Azure AI Foundry. The service is based on the OpenAI Assistants API
+1. Azure AI Foundry Agent Service is a managed service in Azure that is designed to provide a framework for creating, managing, and using AI agents within Azure
+AI Foundry. The service is based on the OpenAI Assistants API
 2. OpenAI Assistants API provides a subset of the features in Foundry Agent Service, and can only be used with OpenAI models. 
-3. Semantic Kernel is a lightweight, open-source development kit that you can use to build AI agents and orchestrate multi-agent solutions. Semantic kernel SDK is for GenAI, where Semantic kernel framework is for Agentic solutions. 
+3. Semantic Kernel is a lightweight, open-source development kit that you can use to build AI agents and orchestrate multi-agent solutions. Semantic kernel SDK
+is for GenAI, where Semantic kernel framework is for Agentic solutions. 
 4. AutoGen is an open-source framework for developing agents rapidly. It's useful as a research and ideation tool when experimenting with agents.
 5. Microsoft 365 Agents SDK: For developers to create self hosted agents
-6. Microsoft Copilot Studio provides a low-code development environment for anyone to quickly build and deploy agents that integrate with a Microsoft 365 ecosystem 
+6. Microsoft Copilot Studio provides a low-code development environment for anyone to quickly build and deploy agents that integrate with a Microsoft 365 ecosystem
 7. Copilot Studio agent builder in Microsoft 365 Copilot: declarative. Best one for the beginers. 
 next one would be MS Power platform
 Orgs with more complex extentions can use M365 copilot studio 
 For solutions on azure backend use azure AIstudio. Can start with foundry agent and elevate it to the semantic kernels. 
+
+
+Foundry Agent Service has 3 parts: 
+-- Models ( use common OpenAI or Azure AI foundry models)  
+-- Knowlege ( enable the agent to ground prompts with contextual data)
+-- Tools (Enable code interpretations) 
+LAB: https://microsoftlearning.github.io/mslearn-ai-agents/Instructions/01-agent-fundamentals.html
 
 
 Part 2: Develop an AI agent with Azure AI Foundry Agent Service
