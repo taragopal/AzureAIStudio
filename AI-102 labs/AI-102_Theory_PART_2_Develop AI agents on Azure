@@ -229,6 +229,39 @@ Why ? Can help modularize the big task, without using an orchestrator. Its very 
 Everyworkflow is more reliable and easier to troubleshoot incase of a problem. 
 
 
+Steps to set up a multi-agent solution with connected agents: 
+
+1. Initialize the agents client: First, you create a client that connects to your Azure AI Foundry project.
+2. Create an agent to connect to the main agent: Define an agent you want to connect to the main agent. You can do this using the create_agent method on the 
+AgentsClient object. 
+For example, your connected agent might retrieve stock prices, summarize documents, or validate compliance. Give the agent clear instructions that define its 
+purpose.
+3. Initialize the connected agent tool: Use your agent definition to create a ConnectedAgentTool. Assign it a name and description so the main agent knows when 
+and how to use it.
+4. Create the main agent: Create the main agent using the create_agent method. Add your connected agents using the tools property and assign the ConnectedAgentTool 
+definitions to the main agent.
+5. Create a thread and send a message: Create the agent thread that is used to manage the conversation context. Then create a message on the thread that contains 
+the request you want the agent to fulfill.
+6. Run the agent workflow: Once the message is added, create a run to process the request. The main agent uses its tools to delegate tasks as needed and compile a 
+final response for the user.
+7. Handle the results: When the run completes, you can review the main agent's response. The final output may incorporate insights from one or more connected agents. Only the main agent's response is visible to the end user.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Part 5: Integrate MCP Tools with Azure AI Agents
 
 
