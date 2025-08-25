@@ -220,6 +220,11 @@ Describe how connected agents enable modular, collaborative workflows.
 Design a multi-agent solution by defining main agent tools and connected agent roles.
 Build and run a connected agent solution
 
+What? Azure AI Foundry Agent Service can help you develop sophisticated, multi-agent systems that can break down complex tasks into smaller, specialized roles.
+Using connected agents, you can design intelligent solutions where a primary agent delegates work to sub-agents without the need for custom orchestration logic
+or hardcoded routing. This modular approach boosts efficiency and maintainability across a wide range of scenarios.
+
+
 
 
 
