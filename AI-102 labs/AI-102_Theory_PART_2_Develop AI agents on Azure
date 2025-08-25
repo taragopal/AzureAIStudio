@@ -1,7 +1,7 @@
 Part 1: Get started with AI agent development on Azure
 ------------------------------------------------------
 
--- Ways developers can create AI agents: 
+- Ways developers can create AI agents: 
 1. Azure AI Foundry Agent Service is a managed service in Azure that is designed to provide a framework for creating, managing, and using AI agents within Azure
 AI Foundry. The service is based on the OpenAI Assistants API
 2. OpenAI Assistants API provides a subset of the features in Foundry Agent Service, and can only be used with OpenAI models. 
