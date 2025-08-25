@@ -214,6 +214,13 @@ LAB.2.3: Build an agent with custom tools
 
 
 Part 4: Develop a multi-agent solution with Azure AI Foundry Agent Service
+---------------------------------------------------------------------------
+
+Describe how connected agents enable modular, collaborative workflows.
+Design a multi-agent solution by defining main agent tools and connected agent roles.
+Build and run a connected agent solution
+
+
 
 
 Part 5: Integrate MCP Tools with Azure AI Agents
