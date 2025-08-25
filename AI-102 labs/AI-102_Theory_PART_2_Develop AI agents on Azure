@@ -246,7 +246,7 @@ the request you want the agent to fulfill.
 final response for the user.
 7. Handle the results: When the run completes, you can review the main agent's response. The final output may incorporate insights from one or more connected agents. Only the main agent's response is visible to the end user.
 
-
+LAB.2.4: Develop a multi-agent solution: https://microsoftlearning.github.io/mslearn-ai-agents/Instructions/03b-build-multi-agent-solution.html
 
 
 
