@@ -193,26 +193,7 @@ agent = agent_client.create_agent(
 
 LAB.2.3: Build an agent with custom tools 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*************************************************************************************************************************************************
 Part 4: Develop a multi-agent solution with Azure AI Foundry Agent Service
 ---------------------------------------------------------------------------
 
@@ -248,23 +229,22 @@ final response for the user.
 
 LAB.2.4: Develop a multi-agent solution: https://microsoftlearning.github.io/mslearn-ai-agents/Instructions/03b-build-multi-agent-solution.html
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+********************************************************************************************************************************************************************
 Part 5: Integrate MCP Tools with Azure AI Agents
 
 
+
+
+
+
+
+
+
+
+
+
+
+********************************************************************************************************************************************************************
 Part 6: Develop an AI agent with Semantic Kernel
 
 
