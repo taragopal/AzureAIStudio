@@ -225,7 +225,8 @@ Using connected agents, you can design intelligent solutions where a primary age
 or hardcoded routing. This modular approach boosts efficiency and maintainability across a wide range of scenarios.
 
 
-
+Why ? Can help modularize the big task, without using an orchestrator. Its very flexible, because of its modularity. Using agents becomes more easy for traceability. 
+Everyworkflow is more reliable and easier to troubleshoot incase of a problem. 
 
 
 Part 5: Integrate MCP Tools with Azure AI Agents
