@@ -71,7 +71,6 @@ user_functions: Set[Callable[..., Any]] = {
     recent_snowfall,
 }
 
-
 Register the function with your agent using the Azure AI SDK:
 
 # Initialize agent toolset with user functions
